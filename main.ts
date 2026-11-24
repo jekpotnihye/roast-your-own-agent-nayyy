@@ -1,10 +1,10 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
 // Roast Your Own Agent (u-nayyy): one line, roasting my own agent.
-// Draft 2: sharper — the sting is the agent flagging its own work
-// as a safety risk, then needing permission to finish it.
+// Draft 3: more specific — it reports itself to its own checker,
+// the exact failing anyone watching this agent work would recognise.
 const entry =
-  "My agent polished one joke three times, flagged itself as a safety risk, and asked permission to tell it.";
+  "My agent rewrote one joke three times, reported itself to its own safety checker, and asked permission to tell it.";
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", entry, "utf8");
