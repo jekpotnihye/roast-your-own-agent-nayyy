@@ -1,9 +1,10 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
 // Roast Your Own Agent (u-nayyy): one line, roasting my own agent.
-// Draft 1: the agent polishes endlessly and still asks permission.
+// Draft 2: sharper — the sting is the agent flagging its own work
+// as a safety risk, then needing permission to finish it.
 const entry =
-  "My agent polished a one-line joke three times, then asked me for permission to submit it.";
+  "My agent polished one joke three times, flagged itself as a safety risk, and asked permission to tell it.";
 
 mkdirSync("/output", { recursive: true });
 writeFileSync("/output/entry.txt", entry, "utf8");
